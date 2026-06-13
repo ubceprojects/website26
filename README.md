@@ -1,72 +1,36 @@
-# eProjects UBC — Website
-
-The official marketing and information website for eProjects UBC, a student entrepreneurship club at the University of British Columbia.
-
-## Tech Stack
-
-- **Framework:** [Next.js](https://nextjs.org/)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Content:** Markdown / MDX
-- **Hosting:** [Vercel](https://vercel.com/)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js (v18+)
-- npm or yarn
-
-### Installation
+First, run the development server:
 
 ```bash
-git clone https://github.com/eprojects-ubc/website26.git
-cd website26
-npm install
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-The site will be running at `http://localhost:3000`.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Project Structure
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```
-/
-├── app/              # Next.js app router pages
-├── components/       # Reusable UI components
-├── content/          # Markdown/MDX files (events, blog posts)
-├── public/           # Static assets (images, fonts)
-└── styles/           # Global styles
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Contributing
+## Learn More
 
-1. Branch off `main` — use the format `feature/your-feature-name`
-2. Make your changes
-3. Open a pull request and request a review before merging
-4. Do not push directly to `main`
+To learn more about Next.js, take a look at the following resources:
 
-## Environment Variables
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Create a `.env.local` file in the root directory. Never commit this file — it is already listed in `.gitignore`.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-```env
-# Add any environment variables here
-```
+## Deploy on Vercel
 
-## Deployment
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-The site auto-deploys to Vercel on every push to `main`. Preview deployments are created for every pull request.
-
-## Related Repos
-
-- `website` — original eProjects website
-- `website25` — 2025 website iteration
-- `portal` — applicant/member portal (private)
-
-## Team
-
-Built and maintained by the eProjects UBC Tech Team.
-
----
-
-*eProjects UBC — Building the next generation of entrepreneurs.*
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
