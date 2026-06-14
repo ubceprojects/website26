@@ -1,26 +1,242 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ================================================================== */
+/*  eProjects UBC — Design System                                      */
+/*  Dark, premium, ambitious. Vercel × YC × world-class conference.    */
+/* ================================================================== */
+
+@theme {
+  /* Surfaces */
+  --color-background: #07070d;
+  --color-surface: #0b0e1a;
+  --color-surface-2: #11152a;
+
+  /* Text */
+  --color-foreground: #f2f3fa;
+  --color-muted: #9298ae;
+  --color-subtle: #5b6178;
+
+  /* Brand accents */
+  --color-accent: #3b82f6;
+  --color-accent-bright: #60a5fa;
+  --color-indigo: #6366f1;
+  --color-violet: #8b5cf6;
+  --color-fuchsia: #a855f7;
+
+  /* Hairline border token */
+  --color-line: rgba(255, 255, 255, 0.08);
+
+  /* Fonts (wired in layout.tsx) */
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ------------------------------------------------------------------ */
+/*  Base                                                               */
+/* ------------------------------------------------------------------ */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(59, 130, 246, 0.32);
+    color: #ffffff;
+  }
+
+  /* Subtle, dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.16);
+    background-clip: content-box;
+  }
+
+  h1, h2, h3, h4 {
+    text-wrap: balance;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ------------------------------------------------------------------ */
+/*  Typography helpers                                                 */
+/* ------------------------------------------------------------------ */
+
+/* White → cool-blue vertical gradient for big display headlines */
+.text-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #aeb7d8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Brand gradient for accent words (blue → violet → fuchsia) */
+.text-gradient-accent {
+  background: linear-gradient(110deg, #60a5fa 0%, #818cf8 45%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Monospace eyebrow label — the "premium dev-tool" tag look */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent-bright);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Surfaces — glassmorphism cards                                     */
+/* ------------------------------------------------------------------ */
+
+.glass {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.045) 0%,
+    rgba(255, 255, 255, 0.012) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.glass-strong {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Animated gradient hairline that reveals on hover (use on group-hover) */
+.card-glow {
+  position: relative;
+  transition: border-color 0.4s ease, transform 0.4s ease;
+}
+.card-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(130deg, rgba(96, 165, 250, 0.6), transparent 40%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.card-glow:hover::before {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Backgrounds — grids, dots, glows                                   */
+/* ------------------------------------------------------------------ */
+
+/* Faint engineering grid (Linear / Anthropic style) */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Dot matrix */
+.dot-bg {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.09) 1px,
+    transparent 1px
+  );
+  background-size: 26px 26px;
+}
+
+/* Radial fade mask — fades a background out toward the edges */
+.mask-fade {
+  -webkit-mask-image: radial-gradient(
+    ellipse 75% 60% at 50% 38%,
+    #000 35%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 75% 60% at 50% 38%,
+    #000 35%,
+    transparent 100%
+  );
+}
+
+.mask-fade-b {
+  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+}
+
+/* Soft radial brand glow — drop behind heroes / CTAs */
+.glow-accent {
+  background: radial-gradient(
+    circle at center,
+    rgba(59, 130, 246, 0.28) 0%,
+    rgba(99, 102, 241, 0.12) 35%,
+    transparent 70%
+  );
+  filter: blur(20px);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Motion                                                             */
+/* ------------------------------------------------------------------ */
+
+@keyframes gradient-pan {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-pan 8s ease infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.9; }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
