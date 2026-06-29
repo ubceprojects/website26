@@ -1,1 +1,150 @@
 @import "tailwindcss";
+
+/*
+  eProjects UBC — design tokens (single source of truth).
+  Derived directly from the eProjects Brandbook 25-26.
+  Change a value here and it flows to the whole site.
+*/
+@theme {
+  /* ---- Primary palette ---- */
+  --color-midnight: #012241; /* Midnight Snack */
+  --color-ocean: #05527b; /* Ocean Cerulean */
+  --color-skynet: #0c88bf; /* Skynet */
+  --color-cloud: #00a7e8; /* Around the Cloud */
+
+  /* ---- Surfaces & neutrals (black -> midnight family) ---- */
+  --color-night: #030f1b; /* page background */
+  --color-surface: #07182b; /* card surface */
+  --color-line: #143350; /* hairline borders */
+  --color-mist: #9db8d0; /* muted body text */
+  --color-haze: #e6f0fa; /* primary body text */
+
+  /* ---- Secondary / event-accent palette (per-event use) ---- */
+  --color-flare: #ff5151;
+  --color-ember: #cb0404;
+  --color-amber: #ffbd59;
+  --color-orchid: #cd10a3;
+
+  /* ---- Type ---- */
+  --font-display: var(--font-league), "Arial Narrow", sans-serif;
+  --font-heading: var(--font-sofia), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+
+  /* ---- Radii ---- */
+  --radius-card: 1.25rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-night);
+    color: var(--color-haze);
+    font-family: var(--font-body);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
+@layer components {
+  /* Signature gradient: Midnight -> Cloud */
+  .brand-gradient {
+    background-image: linear-gradient(
+      110deg,
+      #012241 0%,
+      #05527b 42%,
+      #0c88bf 74%,
+      #00a7e8 100%
+    );
+  }
+  .text-gradient {
+    background-image: linear-gradient(100deg, #0c88bf, #00a7e8 55%, #5cc8f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  /* Large display title styling (League Spartan, uppercase) */
+  .display {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 0.95;
+  }
+}
+
+@layer utilities {
+  .glow-cloud {
+    box-shadow: 0 0 90px -12px rgba(0, 167, 232, 0.5);
+  }
+  /* faint blueprint grid for section backgrounds */
+  .grid-mask {
+    background-image:
+      linear-gradient(to right, rgba(20, 51, 80, 0.35) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(20, 51, 80, 0.35) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, transparent 70%);
+    mask-image: radial-gradient(ellipse at center, #000 0%, transparent 70%);
+  }
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.animate-floaty {
+  animation: floaty 6s ease-in-out infinite;
+}
+
+/* Slow-drifting aurora glow blobs for hero backgrounds */
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(40px, -30px) scale(1.08);
+  }
+  66% {
+    transform: translate(-30px, 24px) scale(0.96);
+  }
+}
+.animate-drift {
+  animation: drift 16s ease-in-out infinite;
+}
+
+/* Infinite marquee */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-floaty,
+  .animate-drift,
+  .animate-marquee {
+    animation: none;
+  }
+}
