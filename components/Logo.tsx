@@ -12,7 +12,7 @@ export function Logo({
     <Link
       href="/"
       className={`group flex items-center gap-2.5 ${className}`}
-      aria-label="eProjects UBC — home"
+      aria-label="eProjects UBC home"
     >
       <Image
         src="/brand/logo-coin.png"

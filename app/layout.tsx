@@ -6,8 +6,8 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "eProjects UBC — Where Start-Ups Begin",
-    template: "%s — eProjects UBC",
+    default: "eProjects UBC · Where Start-Ups Begin",
+    template: "%s · eProjects UBC",
   },
   description:
     "eProjects UBC is the student-run startup accelerator where start-ups begin.",

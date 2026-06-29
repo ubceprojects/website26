@@ -91,7 +91,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------- Marquee ---------- */}
-      <Marquee items={EVENTS.map((e) => e.name.split(" — ")[0])} />
+      <Marquee items={EVENTS.map((e) => e.name.split(":")[0])} />
 
       {/* ---------- Stats ---------- */}
       <Container className="mt-16">
@@ -167,7 +167,7 @@ export default function HomePage() {
                     {e.when}
                   </span>
                   <h3 className="mt-2 text-lg text-white">
-                    {e.name.split(" — ")[0]}
+                    {e.name.split(":")[0]}
                   </h3>
                   <div className="mt-5 flex items-center justify-between text-xs text-mist">
                     <span>{e.where}</span>
@@ -201,8 +201,8 @@ export default function HomePage() {
                   Ready to build?
                 </h2>
                 <p className="mx-auto mt-5 max-w-md text-white/80">
-                  Join a community of student founders and turn your idea into a
-                  real venture this year.
+                  Join a crew of student founders and actually build the thing
+                  this year.
                 </p>
                 <div className="mt-9 flex justify-center">
                   <Button href="/contact" variant="white" size="lg">

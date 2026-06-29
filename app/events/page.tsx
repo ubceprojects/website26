@@ -6,7 +6,7 @@ import { EVENTS, PHASES, type EventItem } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Events",
   description:
-    "The eProjects UBC season — ten events across an eight-month accelerator arc, from IGNITION to MERIDIAN.",
+    "The eProjects UBC season: ten events across an eight-month accelerator arc, from IGNITION to MERIDIAN.",
 };
 
 function EventCard({ event }: { event: EventItem }) {
@@ -64,9 +64,9 @@ export default function EventsPage() {
           </Reveal>
           <Reveal delay={220}>
             <p className="mx-auto mt-6 max-w-2xl text-base text-mist sm:text-lg">
-              Every event is a step in an eight-month accelerator journey — from
+              Every event is a step in an eight-month accelerator journey, from
               your first spark at IGNITION to going public at MERIDIAN. You
-              don&apos;t just attend; you progress.
+              don&apos;t just attend, you progress.
             </p>
           </Reveal>
           <Reveal delay={320}>

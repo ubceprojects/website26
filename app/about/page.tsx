@@ -7,7 +7,7 @@ import { SITE, STATS, PHASES } from "@/lib/data";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "eProjects UBC is a student-run startup accelerator — an eight-month, ten-event arc that turns curious students into builders. Where start-ups begin.",
+    "eProjects UBC is a student-run startup accelerator: an eight-month, ten-event arc that turns curious students into builders. Where start-ups begin.",
 };
 
 export default function AboutPage() {
@@ -43,7 +43,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-3xl space-y-6 text-lg leading-relaxed text-mist">
             <Reveal>
               <p>
-                eProjects isn&apos;t a club you attend — it&apos;s an accelerator
+                eProjects isn&apos;t a club you attend. It&apos;s an accelerator
                 you move through. Over eight months, ten events take you from
                 your first spark to launching something real.
               </p>
@@ -60,8 +60,8 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={200}>
               <p>
-                We&apos;re run entirely by students, for students — and we exist
-                to prove UBC isn&apos;t a spectator campus. It&apos;s where
+                We&apos;re run entirely by students, for students, and we&apos;re
+                here to prove UBC isn&apos;t a spectator campus. It&apos;s where
                 start-ups begin.
               </p>
             </Reveal>
@@ -94,7 +94,7 @@ export default function AboutPage() {
               An eight-month transformation, in four phases.
             </h2>
             <p className="mt-4 text-mist">
-              The season is designed as a progression — each phase builds on the
+              The season is built as a progression. Each phase builds on the
               last, taking you from curiosity to a launched venture.
             </p>
           </Reveal>
@@ -134,8 +134,8 @@ export default function AboutPage() {
                   Start your arc.
                 </h2>
                 <p className="mx-auto mt-5 max-w-md text-white/80">
-                  The journey begins at IGNITION every September. Find your way
-                  in — as a member or on the team.
+                  It all kicks off at IGNITION every September. Find your way in,
+                  as a member or on the team.
                 </p>
                 <div className="mt-9 flex justify-center">
                   <Button href="/contact" variant="white" size="lg">

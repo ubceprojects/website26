@@ -8,7 +8,7 @@ import { TEAM, TEAM_DEPARTMENTS } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Team",
   description:
-    "Meet the eTeam — the students building eProjects UBC across leadership, technology, marketing, corporate relations, finance, and operations.",
+    "Meet the eTeam, the students building eProjects UBC across leadership, technology, marketing, corporate relations, finance, and operations.",
 };
 
 export default function TeamPage() {
@@ -44,8 +44,8 @@ export default function TeamPage() {
                   Meet the <span className="text-gradient">builders.</span>
                 </h1>
                 <p className="mt-3 max-w-xl text-sm text-mist sm:text-base">
-                  The students behind every event, partnership, and pixel —
-                  running eProjects across six departments.
+                  The crew that makes eProjects happen. Six departments, every
+                  event, every partnership, all season long.
                 </p>
               </div>
             </div>

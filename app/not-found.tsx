@@ -14,7 +14,7 @@ export default function NotFound() {
           Lost in the ecosystem.
         </h1>
         <p className="mx-auto mt-4 max-w-md text-mist">
-          This page doesn&apos;t exist — but the launchpad is still right here.
+          This page doesn&apos;t exist, but the launchpad is still right here.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Button href="/" size="lg">

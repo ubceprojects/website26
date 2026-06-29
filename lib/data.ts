@@ -7,7 +7,7 @@ export const SITE = {
   name: "eProjects UBC",
   tagline: "Where Start-Ups Begin",
   blurb:
-    "UBC's student-run startup accelerator — turning ambitious ideas into real ventures through events, mentorship, and a community of builders.",
+    "UBC's student-run startup accelerator. You bring the idea. We bring the events, the mentors, and the people to turn it into a real company.",
 };
 
 // TODO: confirm real figures before launch — these are placeholders.
@@ -66,7 +66,7 @@ export const EVENTS: EventItem[] = [
     name: "IGNITION",
     tagline: "The year begins here.",
     blurb:
-      "The launch. A high-energy kickoff with a VC, founder, intrapreneur, and student builder on one panel — plus a portrait booth, food, and the full 8-month arc revealed. You're not joining a club; you're enrolling in an accelerator.",
+      "The launch. A high-energy kickoff with a VC, founder, intrapreneur, and student builder all on one panel, plus a portrait booth, food, and the full 8-month arc laid out. You're not joining a club. You're enrolling in an accelerator.",
     when: "Mid-September",
     time: "6:00 – 8:30 PM",
     where: "UBC Campus",
@@ -78,7 +78,7 @@ export const EVENTS: EventItem[] = [
     name: "FORGE",
     tagline: "Make something real.",
     blurb:
-      "A one-day buildathon with UBC engineering design teams. Challenge reveal, build sprint, live mentors, and final demos — fast, ambitious, and cross-disciplinary.",
+      "A one-day buildathon with UBC engineering design teams. Challenge reveal, build sprint, mentors on the floor, then final demos. Fast, ambitious, and cross-disciplinary.",
     when: "Early October",
     time: "9:30 AM – 5:30 PM",
     where: "Maker Space",
@@ -90,7 +90,7 @@ export const EVENTS: EventItem[] = [
     name: "INTRAPRENEUR",
     tagline: "Build inside the giants.",
     blurb:
-      "Innovation leads from companies like Microsoft and Amazon show that entrepreneurship lives inside big institutions too. A sharp panel plus a Problem Hunt that sends you home with real problems to solve.",
+      "Innovation leads from Microsoft and Amazon prove that entrepreneurship happens inside big companies too. A sharp panel, plus a Problem Hunt that sends you home with real problems to crack.",
     when: "Late October",
     time: "6:00 – 8:30 PM",
     where: "Sauder / Nest",
@@ -102,7 +102,7 @@ export const EVENTS: EventItem[] = [
     name: "ORBIT",
     tagline: "The startup universe, up close.",
     blurb:
-      "4–5 YC alumni founders — some virtual from San Francisco, some in person — make the global startup world feel reachable. Keynote, fireside, and a student startup mini-showcase.",
+      "A handful of YC alumni founders, some beaming in from San Francisco, some in the room, make the global startup world feel within reach. Keynote, fireside, and a student startup mini-showcase.",
     when: "Early November",
     time: "6:00 – 8:00 PM",
     where: "Hybrid",
@@ -111,7 +111,7 @@ export const EVENTS: EventItem[] = [
   },
   {
     slug: "edn",
-    name: "EDN — Executive Dinner Night",
+    name: "EDN: Executive Dinner Night",
     tagline: "Earned access.",
     blurb:
       "Semester 1's flagship: a candlelit, curated dinner with C-suite executives, founders, and investors. Application-only, with structured table conversations built to go past small talk. The room most students never reach.",
@@ -124,10 +124,10 @@ export const EVENTS: EventItem[] = [
   },
   {
     slug: "e2",
-    name: "E² — Entrepreneurship Squared",
+    name: "E²: Entrepreneurship Squared",
     tagline: "Learn how investors think.",
     blurb:
-      "Semester 2 opens with capital fluency. A deliberately confrontational Founder vs. VC panel, then a live pitch clinic where members pitch, get scored, and get feedback in real time.",
+      "Semester 2 opens with how money actually works. A deliberately heated Founder vs. VC panel, then a live pitch clinic where members pitch, get scored, and get feedback on the spot.",
     when: "Mid-January",
     time: "6:00 – 8:30 PM",
     where: "Lecture Hall",
@@ -139,7 +139,7 @@ export const EVENTS: EventItem[] = [
     name: "R&D",
     tagline: "Stop talking. Start shipping.",
     blurb:
-      "A one-day hackathon inside Microsoft's Vancouver office. Teams get a real brief — AI, climate, health, or fintech — and a few hours to ship a working agentic prototype, with mentors on the floor.",
+      "A one-day hackathon inside Microsoft's Vancouver office. Teams pick a real brief in AI, climate, health, or fintech, then get a few hours to ship a working prototype, with mentors on the floor.",
     when: "Late January",
     time: "9:00 AM – 9:00 PM",
     where: "Microsoft Vancouver",
@@ -148,8 +148,8 @@ export const EVENTS: EventItem[] = [
   },
   {
     slug: "apex",
-    name: "APEX — EY Pitchathon",
-    tagline: "Where preparation meets performance.",
+    name: "APEX: EY Pitchathon",
+    tagline: "Months of prep. One pitch.",
     blurb:
       "The year's highest-stakes competition, hosted inside EY. Teams pitch on defensibility and sustainability to professional judges. Real setting, real pressure, real prizes.",
     when: "Mid-February",
@@ -163,7 +163,7 @@ export const EVENTS: EventItem[] = [
     name: "Company Crawl",
     tagline: "Walk the floors you want to build.",
     blurb:
-      "The most selective event of the year: 30 curated students spend a day inside 3–4 startup offices in Downtown Vancouver, meeting founders and seeing startup culture from the inside.",
+      "The most selective event of the year. Thirty students spend a day inside a few startup offices in Downtown Vancouver, meeting founders and seeing the culture from the inside.",
     when: "Early March",
     time: "9:00 AM – 5:30 PM",
     where: "Downtown Vancouver",

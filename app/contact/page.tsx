@@ -6,13 +6,13 @@ import { SOCIALS } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Two ways to join eProjects UBC — become a member for the events, or join the team that runs them. Applications open September 2026.",
+    "Two ways to join eProjects UBC: become a member for the events, or join the team that runs them. Applications open September 2026.",
 };
 
 const joinPaths = [
   {
     title: "Become a Member",
-    body: "Get on the list for all ten events across the eight-month arc — from IGNITION to MERIDIAN. Show up, build, and grow with the community.",
+    body: "Get on the list for all ten events across the eight-month arc, from IGNITION to MERIDIAN. Show up, build, and grow with the community.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 3l2.5 5.2 5.7.8-4.1 4 1 5.7L12 21l-5.1 2.7 1-5.7-4.1-4 5.7-.8L12 3z" />
@@ -21,7 +21,7 @@ const joinPaths = [
   },
   {
     title: "Join the Team",
-    body: "Help run the accelerator. Coordinator and executive roles across technology, marketing, corporate relations, finance, and operations — the people behind every event.",
+    body: "Help run the accelerator. Coordinator and executive roles across technology, marketing, corporate relations, finance, and operations. The people behind every event.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
