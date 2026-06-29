@@ -26,6 +26,20 @@ export default function HomePage() {
     <main>
       {/* ---------- Hero ---------- */}
       <section className="relative overflow-hidden">
+        {/* team photo background */}
+        <div className="pointer-events-none absolute inset-0 -z-20">
+          <Image
+            src="/community.jpg"
+            alt=""
+            aria-hidden
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-60"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-night/45 via-night/65 to-night" />
+        </div>
+
         {/* aurora background */}
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute left-[20%] top-[-12%] h-[460px] w-[460px] animate-drift rounded-full bg-cloud/25 blur-[130px]" />
@@ -124,36 +138,6 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
-        </Container>
-      </Section>
-
-      {/* ---------- Community ---------- */}
-      <Section className="pt-0">
-        <Container>
-          <Reveal>
-            <div className="relative overflow-hidden rounded-card border border-line">
-              <div className="relative aspect-[16/11] w-full sm:aspect-[21/9]">
-                <Image
-                  src="/community.jpg"
-                  alt="eProjects UBC members together at an event"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 1152px"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-night via-night/55 to-night/10" />
-              </div>
-              <div className="absolute inset-x-0 bottom-0 p-7 sm:p-10">
-                <Eyebrow>The community</Eyebrow>
-                <h2 className="display mt-4 max-w-2xl text-3xl text-white sm:text-5xl">
-                  A room full of builders.
-                </h2>
-                <p className="mt-3 max-w-md text-sm text-mist sm:text-base">
-                  Hundreds of students show up, connect, and build together
-                  across the season — this is what you&apos;re joining.
-                </p>
-              </div>
-            </div>
-          </Reveal>
         </Container>
       </Section>
 

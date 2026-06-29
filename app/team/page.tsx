@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Button, Container, Eyebrow, Section } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { TeamCard } from "@/components/TeamCard";
@@ -23,20 +24,31 @@ export default function TeamPage() {
           <div className="absolute inset-0 grid-mask opacity-50" />
         </div>
 
-        <Container className="pb-8 pt-20 text-center sm:pt-24">
+        <Container className="pt-10 sm:pt-14">
           <Reveal>
-            <Eyebrow>The eTeam · 2026–27</Eyebrow>
-          </Reveal>
-          <Reveal delay={120}>
-            <h1 className="display mx-auto mt-6 max-w-3xl text-5xl text-white sm:text-7xl">
-              Meet the <span className="text-gradient">builders.</span>
-            </h1>
-          </Reveal>
-          <Reveal delay={220}>
-            <p className="mx-auto mt-6 max-w-2xl text-base text-mist sm:text-lg">
-              The students behind every event, partnership, and pixel — running
-              eProjects across six departments.
-            </p>
+            <div className="relative overflow-hidden rounded-card border border-line/70 shadow-[0_30px_80px_-40px_rgba(0,167,232,0.45)]">
+              <div className="relative aspect-[1747/954] w-full">
+                <Image
+                  src="/team-2026.jpg"
+                  alt="The eProjects UBC team together at their first summer social, May 2026"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 1152px"
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-night via-night/45 to-transparent" />
+              </div>
+              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
+                <Eyebrow>The eTeam · 2026–27</Eyebrow>
+                <h1 className="display mt-4 max-w-2xl text-4xl text-white sm:text-6xl">
+                  Meet the <span className="text-gradient">builders.</span>
+                </h1>
+                <p className="mt-3 max-w-xl text-sm text-mist sm:text-base">
+                  The students behind every event, partnership, and pixel —
+                  running eProjects across six departments.
+                </p>
+              </div>
+            </div>
           </Reveal>
         </Container>
       </section>
